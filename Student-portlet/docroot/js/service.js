@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.DEMO", "com.lcd.demo.service", "Student-portlet");

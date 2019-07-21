@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+<service-builder package-path="com.lcd.demo">
+	<author>Smile</author>
+	<namespace>DEMO</namespace>
+
+	<entity name="Student" local-service="true" remote-service="true" table="student">
+		<!-- PK fields -->
+		<column name="studentId" type="long" primary="true"></column>
+		<!-- Other fields -->
+		<column name="name" type="String"></column>
+		<column name="age" type="int"></column>
+		<column name="gender" type="String"></column>
+		<column name="phone" type="int"></column>
+		<column name="address" type="String"></column>
+		<column name="fileImage" type="long"></column>
+		<column name="linkImage" type="String"></column>
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="studentId"></order-column>
+		</order>
+		<!-- Finder methods -->
+		<finder name="Name" return-type="Collection">
+			<finder-column name="name" comparator="LIKE"></finder-column>
+		</finder>
+		<finder name="Address" return-type="Collection">
+			<finder-column name="address" comparator="LIKE"></finder-column>
+		</finder>
+		<finder name="Gender" return-type="Collection">
+			<finder-column name="gender" comparator="LIKE"></finder-column>
+		</finder>
+		<finder name="N_A" return-type="Collection">
+			<finder-column name="name" ></finder-column>
+			<finder-column name="address"></finder-column>
+		</finder>
+
+		<finder name="N_A_G" return-type="Collection">
+			<finder-column name="name" comparator="LIKE"></finder-column>
+			<finder-column name="address" comparator="LIKE"></finder-column>
+			<finder-column name="gender" comparator="LIKE"></finder-column>
+		</finder>
+		
+		<reference></reference>
+	</entity>
+</service-builder>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.findByN_A_G">
+ 	<![CDATA[
+ 		SELECT
+ 			*
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name LIKE ?) AND
+ 			(student.address LIKE ?) AND
+ 			(student.gender LIKE ?)
+	]]>
+	</sql>
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.countByN_A_G">
+ 	<![CDATA[
+ 		SELECT COUNT(*) AS COUNT_VALUE
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name LIKE ?) AND
+ 			(student.address LIKE ?) AND
+ 			(student.gender LIKE ?)
+	]]>
+	</sql>
+	
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.findByName">
+ 	<![CDATA[
+ 		SELECT
+ 			*
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name LIKE ?)
+	]]>
+	</sql>
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.countByName">
+ 	<![CDATA[
+ 		SELECT COUNT(*) AS COUNT_VALUE
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name LIKE ?)
+	]]>
+	</sql>
+	
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.findByAddress">
+ 	<![CDATA[
+ 		SELECT
+ 			*
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.address LIKE ?)
+	]]>
+	</sql>
+	
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.findByGender">
+ 	<![CDATA[
+ 		SELECT
+ 			*
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.gender LIKE ?)
+	]]>
+	</sql>
+</custom-sql>

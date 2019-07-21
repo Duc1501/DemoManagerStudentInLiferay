@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.findByName">
+ 	<![CDATA[
+ 		SELECT
+ 			student.Name AS name,
+ 			student.Age AS age,
+ 			student.Gender AS gender
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name =?)
+	]]>
+	</sql>
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.countByName">
+ 	<![CDATA[
+ 		SELECT COUNT(*) AS COUNT_VALUE
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name =?)
+	]]>
+	</sql>	
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.findByI_N_A_G_P_A">
+ 	<![CDATA[
+ 		SELECT
+ 			student.Name AS name,
+ 			student.Age AS age,
+ 			student.Gender AS gender
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name =?) AND
+ 			(student.gender =?) AND
+ 			(student.address =?)
+	]]>
+	</sql>
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.countByI_N_A_G_P_A">
+ 	<![CDATA[
+ 		SELECT COUNT(*) AS COUNT_VALUE
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name =?) AND
+ 			(student.gender =?) AND
+ 			(student.address =?)
+	]]>
+	</sql>
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.findByN_A_G">
+ 	<![CDATA[
+ 		SELECT
+ 			student.Name AS name,
+ 			student.Age AS age,
+ 			student.Gender AS gender
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name =?) AND
+ 			(student.gender =?) AND
+ 			(student.address =?)
+	]]>
+	</sql>
+	<sql
+ 		id="com.lcd.demo.service.persistence.StudentFinder.countByN_A_G">
+ 	<![CDATA[
+ 		SELECT COUNT(*) AS COUNT_VALUE
+ 		FROM
+ 			student
+ 		WHERE
+ 			(student.name =?) AND
+ 			(student.gender =?) AND
+ 			(student.address =?)
+	]]>
+	</sql>
+</custom-sql>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.lcd.demo.service.StudentLocalService" class="com.lcd.demo.service.impl.StudentLocalServiceImpl" />
+	<bean id="com.lcd.demo.service.StudentLocalServiceUtil" class="com.lcd.demo.service.StudentLocalServiceUtil">
+		<property name="service" ref="com.lcd.demo.service.StudentLocalService" />
+	</bean>
+	<bean id="com.lcd.demo.service.StudentService" class="com.lcd.demo.service.impl.StudentServiceImpl" />
+	<bean id="com.lcd.demo.service.StudentServiceUtil" class="com.lcd.demo.service.StudentServiceUtil">
+		<property name="service" ref="com.lcd.demo.service.StudentService" />
+	</bean>
+	<bean id="com.lcd.demo.service.persistence.StudentPersistence" class="com.lcd.demo.service.persistence.StudentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.lcd.demo.service.persistence.StudentFinder" class="com.lcd.demo.service.persistence.StudentFinderImpl" parent="basePersistence" />
+</beans>
